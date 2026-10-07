@@ -15,7 +15,7 @@ matchRouter.get('/', async (req, res) => {
   if (!parsed.success) {
     return res.status(400).json({
       error: 'Invalid Query.',
-      details: parsed.error,
+      details: parsed.error.issues,
     });
   }
 
